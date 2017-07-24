@@ -10,9 +10,14 @@ import UIKit
 
 class CountryListVC: UITableViewController {
 
+    // Mang chau luc
+    var continentArray = [String]()
+    // Mang
+    var countries = [Countrie]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.loadDataFromPlist()
        	
     }
 
@@ -20,7 +25,18 @@ class CountryListVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    // MARK:: Function
+    // Load data from file plist
+    func loadDataFromPlist(){
+        let path = Bundle.main.path(forResource: "data", ofType: "plist")
+        if let array = NSArray(contentsOfFile: path!){
+            print(array.value(forKey: "continent"))
+            print(array.value(forKey: "countries"))
+        }
+    }
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,5 +103,20 @@ class CountryListVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+// Luu tru 3 thang con cua Countrie
+struct Countrie{
+    var capital : String
+    var coutry : String
+    var flag : String
+
+    init(capital: String , country : String , flag : String) {
+        self.capital = capital
+        self.coutry = country
+        self.flag = flag
+    }
+    
+
 
 }
