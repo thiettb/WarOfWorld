@@ -197,43 +197,27 @@
 		<array>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Australia</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Canberra</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>australia.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>New Zealand</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Wellington</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>newzealand.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Papua New Guinea</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Port Moresby</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
-			</dict>
-			<dict>
-				<key>coutry</key>
-				<string>Tazania</string>
-				<key>capital</key>
-				<string>Loboto</string>
-				<key>flag</key>
-				<string>tanzania.png</string>
-			</dict>
-			<dict>
-				<key>coutry</key>
-				<string>Tazania</string>
-				<key>capital</key>
-				<string>Loboto</string>
-				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>PNG.png</string>
 			</dict>
 		</array>
 	</dict>
