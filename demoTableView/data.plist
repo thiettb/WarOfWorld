@@ -103,43 +103,43 @@
 		<array>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Italy</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Roma</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>y</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>France</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Paris</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>france</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>England</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>London</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>england</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Spain</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Madrid</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>spain</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Germany</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Berlin</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>germany</string>
 			</dict>
 		</array>
 	</dict>
