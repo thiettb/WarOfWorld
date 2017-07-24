@@ -12,6 +12,8 @@
 		E2EE8EEC1F25A2320090395F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EE8EEA1F25A2320090395F /* Main.storyboard */; };
 		E2EE8EEE1F25A2320090395F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EE8EED1F25A2320090395F /* Assets.xcassets */; };
 		E2EE8EF11F25A2320090395F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EE8EEF1F25A2320090395F /* LaunchScreen.storyboard */; };
+		E2EE8EF91F25A24E0090395F /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2EE8EF81F25A24E0090395F /* data.plist */; };
+		E2EE8EFB1F25A3EB0090395F /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE8EFA1F25A3EB0090395F /* CountryListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E2EE8EED1F25A2320090395F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2EE8EF01F25A2320090395F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2EE8EF21F25A2320090395F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2EE8EF81F25A24E0090395F /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		E2EE8EFA1F25A3EB0090395F /* CountryListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 				E2EE8EE61F25A2320090395F /* AppDelegate.swift */,
 				E2EE8EE81F25A2320090395F /* ViewController.swift */,
 				E2EE8EEA1F25A2320090395F /* Main.storyboard */,
+				E2EE8EFA1F25A3EB0090395F /* CountryListVC.swift */,
 				E2EE8EED1F25A2320090395F /* Assets.xcassets */,
 				E2EE8EEF1F25A2320090395F /* LaunchScreen.storyboard */,
 				E2EE8EF21F25A2320090395F /* Info.plist */,
+				E2EE8EF81F25A24E0090395F /* data.plist */,
 			);
 			path = demoTableView;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			files = (
 				E2EE8EF11F25A2320090395F /* LaunchScreen.storyboard in Resources */,
 				E2EE8EEE1F25A2320090395F /* Assets.xcassets in Resources */,
+				E2EE8EF91F25A24E0090395F /* data.plist in Resources */,
 				E2EE8EEC1F25A2320090395F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2EE8EE91F25A2320090395F /* ViewController.swift in Sources */,
+				E2EE8EFB1F25A3EB0090395F /* CountryListVC.swift in Sources */,
 				E2EE8EE71F25A2320090395F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
