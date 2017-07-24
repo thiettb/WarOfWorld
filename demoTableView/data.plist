@@ -56,43 +56,43 @@
 		<array>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Viet Nam</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Ha Noi</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>vietNam.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Laos</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Vientiane</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>laos.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Cambodia</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Phnom Penh</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>Cambodia.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>North Korea</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Pyongyang</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>northKorea.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Singapore</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Singapore</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>singapore.png</string>
 			</dict>
 		</array>
 	</dict>
