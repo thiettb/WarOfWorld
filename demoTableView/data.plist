@@ -13,39 +13,39 @@
 				<key>capital</key>
 				<string>Loboto</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>taza</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
 				<string>Sudan</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Khartoum</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>sudan</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Mali</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Bamako</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>mali</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Senega</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Dakar</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>sene</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Liberia</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Monrovia</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>libe</string>
 			</dict>
 		</array>
 	</dict>
@@ -98,7 +98,7 @@
 	</dict>
 	<dict>
 		<key>continent</key>
-		<string>EU</string>
+		<string>Europe</string>
 		<key>countries</key>
 		<array>
 			<dict>
@@ -150,43 +150,43 @@
 		<array>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Canada</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Ottawa</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>canada.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Mexico</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Mexico</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>mexico.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Venezuela</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Caracas</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>vene.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Cuba</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>La Habana</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>cuba.png</string>
 			</dict>
 			<dict>
 				<key>coutry</key>
-				<string>Tazania</string>
+				<string>Panama</string>
 				<key>capital</key>
-				<string>Loboto</string>
+				<string>Panama</string>
 				<key>flag</key>
-				<string>tanzania.png</string>
+				<string>panama.png</string>
 			</dict>
 		</array>
 	</dict>

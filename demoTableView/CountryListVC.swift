@@ -8,115 +8,149 @@
 
 import UIKit
 
-class CountryListVC: UITableViewController {
-
-    // Mang chau luc
-    var continentArray = [String]()
-    // Mang
-    var countries = [Countrie]()
+class CountryListVC: UITableViewController, ExpandableHeaderViewDelegate {
+    var arrayKeys = [String]()
+    
+    var dictCountry = NSMutableDictionary()
+    
+    var dictdata: NSArray!
+    
+    var status : Bool = false
+    
+    var arrayAll = [[String : Bool]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadDataFromPlist()
-       	
+        
+        self.creatDataWithName()
+        
+        self.title = "List Continents"
+        
+            }
+    func creatDataWithName() {
+        
+        var path: String = ""
+        
+        path = Bundle.main.path(forResource: "data", ofType: "plist")!//Mở file plist
+        
+        dictdata = NSArray(contentsOfFile: path)
+        
+        for i in 0..<dictdata.count {
+            
+            let data = dictdata[i] as! NSDictionary
+            
+            let value = data.value(forKey: "continent") as! String
+            
+            arrayKeys.append(value) //Thêm data valua có key là "continent" -section
+            
+            let dataCountry = data.value(forKey: "countries") as! NSArray
+            
+            dictCountry.setValue(dataCountry, forKey: value)
+            
+            let dic = [value: false]
+            
+            self.arrayAll.append(dic)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func numberOfSections(in tableView: UITableView) -> Int { //Số section tương ứng với arrayKeys
+        
+        return arrayKeys.count
     }
-    // MARK:: Function
-    // Load data from file plist
-    func loadDataFromPlist(){
-        let path = Bundle.main.path(forResource: "data", ofType: "plist")
-        if let array = NSArray(contentsOfFile: path!){
-            print(array.value(forKey: "continent"))
-            print(array.value(forKey: "countries"))
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        let sectionTitle = arrayKeys[section]
+        
+        let sectionObject = dictCountry.object(forKey: sectionTitle) as! NSArray
+        
+        return sectionObject.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        if (cell == nil) {
+            
+            cell  = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+        }
+        let sectionTitle = arrayKeys[indexPath.section]
+        
+        let sectionValuaCountries = dictCountry[sectionTitle] as! NSArray
+        
+        let countryObject = sectionValuaCountries[indexPath.row] as! NSDictionary
+        
+        cell.textLabel?.text = countryObject.value(forKey: "coutry") as! String? //Hiển thị tên nước
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return arrayKeys[section] //hearder section tương ứng với các arrKeys
+    }
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        view.tintColor = UIColor.gray //thanh section có màu xanh
+//        let header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+//        header.textLabel?.textColor = UIColor.white//các textlable trong row có màu trắng
+//    }
+    
+    func toggleSection(header: ExpandableHeaderView, section: Int) {
+//        print(All_Array[section])
+//        print()
+        arrayAll[section][arrayKeys[section]] = !arrayAll[section][arrayKeys[section]]!
+        
+        tableView.beginUpdates()
+        
+        let sectionTitle = arrayKeys[section]
+        
+        let sectionValueCountry = dictCountry[sectionTitle] as! NSArray
+        
+        for i in 0 ..< sectionValueCountry.count{
+            
+            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+        }
+        tableView.endUpdates()
+        
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = ExpandableHeaderView()
+        
+        header.customInit(title: arrayKeys[section],section: section, delegate: self)
+        
+        return header
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 60
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if arrayAll[indexPath.section][arrayKeys[indexPath.section]] == true {
+            
+            return 50//chiều cao 1 section
+            
+        }else{
+            
+            return 0.5 //khoảng cách giữa các section
+            
         }
     }
     
-    
-    
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "ShowDetail") {
+            
+            let detail = segue.destination as! DetailVC
+            
+            let selectedRowIndex: IndexPath = self.tableView.indexPathForSelectedRow!
+            
+            let sectionTitle = arrayKeys[selectedRowIndex.section]
+            
+            let sectionValueConutry = dictCountry[sectionTitle] as! NSArray
+            
+            let countryObject = sectionValueConutry[selectedRowIndex.row] as! NSDictionary
+            
+            detail.dictCountry = countryObject as! NSMutableDictionary
+       
+        }
     }
-    */
-
 }
-// Luu tru 3 thang con cua Countrie
-struct Countrie{
-    var capital : String
-    var coutry : String
-    var flag : String
 
-    init(capital: String , country : String , flag : String) {
-        self.capital = capital
-        self.coutry = country
-        self.flag = flag
-    }
-    
-
-
-}
