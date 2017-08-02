@@ -86,6 +86,9 @@ class CountryListVC: UITableViewController, ExpandableHeaderViewDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return arrayKeys[section] //hearder section tương ứng với các arrKeys
     }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 5
+    }
 //    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
 //        view.tintColor = UIColor.gray //thanh section có màu xanh
 //        let header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
@@ -129,7 +132,7 @@ class CountryListVC: UITableViewController, ExpandableHeaderViewDelegate {
             
         }else{
             
-            return 0.5 //khoảng cách giữa các section
+            return 0 //khoảng cách giữa các section
             
         }
     }
